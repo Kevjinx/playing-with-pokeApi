@@ -59,3 +59,28 @@ input[type=text] {
 #post-search-container {
   visibility: hidden;
 }
+
+#img-top {
+  width: 200px;
+  height: auto
+}
+
+
+#stats-hp {
+  background-color: rgb(235, 62, 62)
+}
+#stats-atk {
+  background-color: rgb(235, 112, 112)
+}
+#stats-def {
+  background-color: orange
+}
+#stats-sp-atk {
+  background-color: rgb(82, 82, 247)
+}
+#stats-sp-def {
+  background-color: rgba(28, 121, 28, 0.712)
+}
+#stats-speed {
+  background-color: rgba(184, 69, 69, 0.657)
+}
