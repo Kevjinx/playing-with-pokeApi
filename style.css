@@ -10,7 +10,7 @@ body {
   background-position: 10% 20%;
 }
 
-#top-detain-container {
+#top-detail-container {
   display: flex;
   justify-content: space-between;
 }

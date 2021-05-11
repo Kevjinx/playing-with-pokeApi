@@ -6,10 +6,12 @@ const pokemonNameInput = document.getElementById('pokemon-name')
 const topImg = document.getElementById('img-top')
 const postSearchContainer = document.getElementById('post-search-container')
 const abilitiesContainer = document.getElementById('abilities-container')
+const topDetailsContainer = document.getElementById('top-detail-container')
 
 
 
 const nameInputHandler = () => {
+  resetSearch()
   getPokemonByName(pokemonNameInput.value.toLowerCase())
   postSearchContainer.style.visibility = 'visible';
 }
@@ -45,6 +47,14 @@ const setImageFromJson = json => {
   return json.sprites.front_default
 }
 
+const resetSearch = () => {
+  const children = Array.from(topDetailsContainer.children)
+  children.forEach(child => {
+    child.innerText = '';
+  })
+  abilitiesContainer.innerHTML = '';
+
+}
 
 
 
@@ -57,6 +67,8 @@ const setImageFromJson = json => {
 //weight
 //image - checked
 //stats - checked
+//abilities - checked
+//reset abilities and other appending
 
 
 //eventlistners
