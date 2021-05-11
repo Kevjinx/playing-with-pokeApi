@@ -23,6 +23,7 @@ const getPokemonByName = name => {
     getStatsFromPokemonJson(json)
     setImageFromJson(json)
     getAbilitesFromPokemonJson(json)
+    setNameFromJson(json)
   })
   .catch(err => console.log(err))
 }
@@ -53,9 +54,17 @@ const resetSearch = () => {
     child.innerText = '';
   })
   abilitiesContainer.innerHTML = '';
-
 }
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+const setNameFromJson = json => {
+  const nameEle = document.getElementById('name-top')
+  const pokemonNameStr = json.forms[0].name;
+  nameEle.innerHTML = capitalizeFirstLetter(pokemonNameStr);
+}
 
 
 //add div for abilities
@@ -68,7 +77,9 @@ const resetSearch = () => {
 //image - checked
 //stats - checked
 //abilities - checked
-//reset abilities and other appending
+//reset abilities and other appending - checked
+//png of pokemons, hover show name, clickable
+
 
 
 //eventlistners
