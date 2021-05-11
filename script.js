@@ -4,10 +4,13 @@ const stats = document.querySelectorAll('.stat-number');
 const pokemonBtn = document.getElementById('enter-pokemon-btn')
 const pokemonNameInput = document.getElementById('pokemon-name')
 const topImg = document.getElementById('img-top')
+const postSearchContainer = document.getElementById('post-search-container')
+
 
 
 const nameInputHandler = () => {
   getPokemonByName(pokemonNameInput.value)
+  postSearchContainer.style.visibility = 'visible';
 }
 
 const getPokemonByName = name => {
