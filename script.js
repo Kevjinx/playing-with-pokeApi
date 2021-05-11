@@ -9,7 +9,7 @@ const postSearchContainer = document.getElementById('post-search-container')
 
 
 const nameInputHandler = () => {
-  getPokemonByName(pokemonNameInput.value)
+  getPokemonByName(pokemonNameInput.value.toLowerCase())
   postSearchContainer.style.visibility = 'visible';
 }
 
