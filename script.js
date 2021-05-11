@@ -52,7 +52,8 @@ const setImageFromJson = json => {
 //stats
 //type
 //weight
-//image
+//image - checked
+//stats - checked
 
 
 //eventlistners
