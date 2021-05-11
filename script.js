@@ -24,6 +24,7 @@ const getPokemonByName = name => {
     setImageFromJson(json)
     getAbilitesFromPokemonJson(json)
     setNameFromJson(json)
+    setPokedexNumberFromJson(json)
   })
   .catch(err => console.log(err))
 }
@@ -66,6 +67,12 @@ const setNameFromJson = json => {
   nameEle.innerHTML = capitalizeFirstLetter(pokemonNameStr);
 }
 
+const setPokedexNumberFromJson = json => {
+  const pokedexNumEle = document.getElementById('pokedex-number')
+  const pokedexNum = json.game_indices[0].game_index;
+  pokedexNumEle.innerHTML = `#${pokedexNum}`;
+}
+
 
 //add div for abilities
 
@@ -74,6 +81,8 @@ const setNameFromJson = json => {
 //stats
 //type
 //weight
+//name - checked
+//pokedex number
 //image - checked
 //stats - checked
 //abilities - checked

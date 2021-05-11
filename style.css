@@ -23,7 +23,6 @@ input[type=text] {
 
 #input-container {
   display: inline-block;
-  margin-bottom: 10%;
 }
 
 .each-stat{
@@ -88,8 +87,9 @@ input[type=text] {
 
 
 #img-top {
-  width: 200px;
-  height: auto
+  width: 100%;
+  height: auto;
+  margin: -300px;
 }
 
 
