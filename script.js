@@ -5,6 +5,7 @@ const pokemonBtn = document.getElementById('enter-pokemon-btn')
 const pokemonNameInput = document.getElementById('pokemon-name')
 const topImg = document.getElementById('img-top')
 const postSearchContainer = document.getElementById('post-search-container')
+const abilitiesContainer = document.getElementById('abilities-container')
 
 
 
@@ -19,14 +20,16 @@ const getPokemonByName = name => {
   .then((json) => {
     getStatsFromPokemonJson(json)
     setImageFromJson(json)
+    getAbilitesFromPokemonJson(json)
   })
   .catch(err => console.log(err))
 }
 
 const getAbilitesFromPokemonJson = json => {
-  return json.abilities.map(abilityObj => {
-    console.log(abilityObj.ability.name)
-    return abilityObj.ability.name
+  json.abilities.forEach(abilityObj => {
+    const abilityElement = document.createElement('p')
+    abilityElement.innerHTML = abilityObj.ability.name
+    abilitiesContainer.appendChild(abilityElement)
   })
 }
 

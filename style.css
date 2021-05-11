@@ -1,6 +1,6 @@
 #app-container {
   position: fixed;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -64,6 +64,28 @@ input[type=text] {
 #post-search-container {
   visibility: hidden;
 }
+
+#abilities-container {
+  display: flex;
+  justify-content: space-between
+}
+#abilities-container p {
+  width: 100px;
+  text-align: center;
+  padding: 2px;
+  font-size: 16px;
+  background-color: wheat;
+  border: 1px solid rgb(66, 4, 4);
+  border-radius: 10px;
+  overflow-wrap: break-word;
+}
+#abilities-tag #stats-tag{
+  font-size: 20px;
+  border-bottom: 2px solid black;
+  text-align: center;
+  width: 100%;
+}
+
 
 #img-top {
   width: 200px;

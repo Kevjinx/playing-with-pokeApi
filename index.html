@@ -13,8 +13,8 @@
   <div id='app-container'>
 
     <div id='top-detain-container'>
-      <h2 id='name-top'></h2>
-      <h2 id='pokedex-number'></h4>
+      <p id='name-top'></p>
+      <p id='pokedex-number'></p>
     </div>
 
     <div id='image-container'>
@@ -22,12 +22,17 @@
     </div>
 
     <div id='input-container'>
-      <input type="text" name="" id="pokemon-name" placeholder='Enter You Pokemon Name'>
+      <input type="text" name="" id="pokemon-name" placeholder='Enter You Pokemon Name' value='pikachu'>
       <button id='enter-pokemon-btn'>Find</button>
     </div>
 
     <div id='post-search-container'>
 
+      <p id='abilities-tag'>Abilities</p>
+      <div id='abilities-container'>
+      </div>
+
+      <p id='stats-tag'>Stats</p>
       <div id='stats-container'>
         <div class='each-stat' id='stats-hp'>
           <p class='stat-number'></p>
@@ -53,8 +58,6 @@
           <p class='stat-number'></p>
           Speed
         </div>
-      </div>
-      <div id='abilities-container'>
       </div>
     </div>
   </div>
