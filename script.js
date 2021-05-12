@@ -11,9 +11,9 @@ const topDetailsContainer = document.getElementById('top-detail-container')
 
 
 const nameInputHandler = () => {
-  resetSearch()
   getPokemonByName(pokemonNameInput.value.toLowerCase())
   postSearchContainer.style.visibility = 'visible';
+  resetSearch()
 }
 
 const getPokemonByName = name => {
@@ -55,6 +55,7 @@ const resetSearch = () => {
     child.innerText = '';
   })
   abilitiesContainer.innerHTML = '';
+  pokemonNameInput.value = ''
 }
 
 function capitalizeFirstLetter(string) {
@@ -74,20 +75,19 @@ const setPokedexNumberFromJson = json => {
 }
 
 
-//add div for abilities
 
 
 //species
-//stats
 //type
 //weight
 //name - checked
-//pokedex number
+//pokedex number -- checked
 //image - checked
 //stats - checked
 //abilities - checked
 //reset abilities and other appending - checked
 //png of pokemons, hover show name, clickable
+//adjacent pokemon with pokedex number
 
 
 
